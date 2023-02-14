@@ -7,7 +7,7 @@ import twilio.rest
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-# STEP 2: Use https://newsapi.org
+# Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
 
 news_params = {
@@ -21,7 +21,7 @@ news_response.raise_for_status()
 news_data = news_response.json()
 articles = [(item['title'], item['description']) for item in news_data['articles'][:3]]
 
-# STEP 3: Use https://www.twilio.com
+# Use https://www.twilio.com
 # Send a seperate message with the percentage change and each article's title and description to your phone number.
 TWILIO_PHONE = '+17087227150'
 MY_PHONE = '+6582288912'
@@ -70,7 +70,7 @@ elif price_change <= 0.95:
 
 
 
-#Optional: Format the SMS message like this:
+# Format the SMS message like this:
 """
 TSLA: 🔺2%
 Headline: Were Hedge Funds Right About Piling Into Tesla Inc. (TSLA)?. 
